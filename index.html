@@ -249,15 +249,42 @@
 
         </div>
 
-        <!-- Community Feedback & Reviews Section (Powered by Giscus) -->
+        <!-- Community Feedback & Reviews Section (Powered by Giscus & Web3Forms) -->
         <div id="feedback-section" class="mt-24 max-w-4xl mx-auto">
             <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-800 relative overflow-hidden shadow-2xl">
                 <div class="absolute -right-16 -top-16 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
                 
                 <div class="text-center max-w-xl mx-auto mb-8">
                     <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Community Feedback & Reviews</h2>
-                    <p class="text-slate-400 text-sm mt-2">Have suggestions or thoughts about these tools? Leave a comment or reaction below via GitHub Discussions!</p>
+                    <p class="text-slate-400 text-sm mt-2">Send a direct message below, or use GitHub Discussions!</p>
                 </div>
+
+                <!-- Web3Forms Direct Feedback Form -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="mb-10 space-y-4 bg-slate-900/60 p-6 rounded-2xl border border-slate-800 text-left">
+                    <input type="hidden" name="access_key" value="535b5d6e-38b7-4bdb-a061-948fa712bd1c">
+                    <h3 class="text-base font-semibold text-white mb-2"><i class="fa-solid fa-paper-plane text-blue-400 mr-2"></i>Send Direct Message</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-1">Your Name</label>
+                            <input type="text" name="name" required placeholder="Enter your name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-1">Your Email</label>
+                            <input type="email" name="email" required placeholder="Enter your email" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Your Message</label>
+                        <textarea name="message" required rows="3" placeholder="Write your review or suggestion..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition flex items-center justify-center space-x-2">
+                        <span>Submit Feedback</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </form>
 
                 <!-- Giscus Script Integration -->
                 <script src="https://giscus.app/client.js"
