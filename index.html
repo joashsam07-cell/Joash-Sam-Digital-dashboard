@@ -289,10 +289,18 @@
 
                 <!-- Feedback Stream List -->
                 <div class="mt-12 pt-8 border-t border-slate-800">
-                    <h3 class="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
-                        <i class="fa-solid fa-comments text-blue-400"></i>
-                        <span>Recent Visitor Comments</span>
-                    </h3>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+                        <h3 class="text-lg font-semibold text-white flex items-center space-x-2">
+                            <i class="fa-solid fa-comments text-blue-400"></i>
+                            <span>Recent Visitor Comments</span>
+                        </h3>
+                        <!-- Average Rating Badge System -->
+                        <div id="average-rating-badge" class="flex items-center space-x-2 bg-slate-900 border border-slate-800 px-3.5 py-1.5 rounded-xl text-xs font-medium text-slate-300 shadow-inner">
+                            <i class="fa-solid fa-star text-amber-400"></i>
+                            <span class="text-slate-400">Average Rating: <strong id="average-score-text" class="text-white">0.0</strong> / 5.0</span>
+                        </div>
+                    </div>
+                    
                     <div id="feedback-list" class="space-y-4">
                         <div class="text-center py-6 text-slate-500 text-sm">Loading community reviews...</div>
                     </div>
@@ -398,25 +406,9 @@
         }
         fetchVisitorCount();
 
-        // 2. Submittable Reviews & Comments System (Persistent via LocalStorage)
-        const STORAGE_KEY = 'joash_sam_creations_reviews_v1';
-
-        const defaultReviews = [
-            {
-                id: 'rev-1',
-                name: 'Dr. R. K. Patil',
-                rating: 5,
-                comment: 'The Special Reagent Maker and Titration Engine are phenomenal lab companions for analytical chemistry and pharmacy students. Exceptional precision!',
-                createdAt: Date.now() - 86400000 * 2
-            },
-            {
-                id: 'rev-2',
-                name: 'Ananya Deshmukh',
-                rating: 5,
-                comment: 'Clean UI and lightning-fast calculations. The Fitness Calculator is my go-to tool for quick BMR and macro tracking.',
-                createdAt: Date.now() - 86400000
-            }
-        ];
+        // 2. Submittable Reviews & Comments System (Persistent via LocalStorage - Cleaned dummy defaults)
+        const STORAGE_KEY = 'joash_sam_creations_reviews_v2';
+        const defaultReviews = []; // Cleaned out dummy reviews as requested
 
         function getStoredReviews() {
             try {
@@ -440,12 +432,22 @@
 
         function renderReviews() {
             const feedbackListEl = document.getElementById('feedback-list');
+            const averageScoreText = document.getElementById('average-score-text');
             const reviews = getStoredReviews();
             
             reviews.sort((a, b) => b.createdAt - a.createdAt);
 
+            // Calculate and display average rating
+            if (reviews.length > 0) {
+                const totalRatingSum = reviews.reduce((sum, item) => sum + item.rating, 0);
+                const averageRating = (totalRatingSum / reviews.length).toFixed(1);
+                averageScoreText.textContent = `${averageRating} (${reviews.length} ${reviews.length === 1 ? 'review' : 'reviews'})`;
+            } else {
+                averageScoreText.textContent = 'No ratings yet';
+            }
+
             if (reviews.length === 0) {
-                feedbackListEl.innerHTML = '<div class="text-center py-6 text-slate-500 text-sm">No comments yet. Be the first to leave a review!</div>';
+                feedbackListEl.innerHTML = '<div class="text-center py-8 text-slate-500 text-sm">No comments yet. Be the first to leave a review!</div>';
                 return;
             }
 
@@ -508,7 +510,7 @@
 
                     feedbackForm.reset();
                     setRating(5);
-                    showModal("Thank You!", "Your review has been successfully posted and saved!");
+                    showModal("Thank You!", "Your review has beensuccessfully posted and saved!");
                 } catch (err) {
                     console.error("Error saving review:", err);
                     showModal("Submission Error", "Could not save your review. Please try again.", true);
