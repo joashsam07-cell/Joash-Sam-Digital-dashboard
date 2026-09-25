@@ -467,6 +467,42 @@
                 });
             });
         });
+
+        // 4. Fix Echothread Error & Notification Banners (High Contrast Dark Red/Slate Styling)
+        const observer = new MutationObserver(() => {
+            const container = document.getElementById('echothread');
+            if (!container) return;
+            
+            const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, null, false);
+            let node;
+            while (node = walker.nextNode()) {
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    const style = window.getComputedStyle(node);
+                    const bg = style.backgroundColor;
+                    
+                    // Detect light/white or pastel error/notification backgrounds (like the pinkish error alert banner)
+                    const rgbMatch = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
+                    if (rgbMatch) {
+                        const r = parseInt(rgbMatch[1]);
+                        const g = parseInt(rgbMatch[2]);
+                        const b = parseInt(rgbMatch[3]);
+                        
+                        // Calculate luminance / brightness to check if background is too bright/light
+                        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                        if (brightness > 160) {
+                            node.style.backgroundColor = '#7f1d1d'; // Deep dark red error box background
+                            node.style.color = '#fef2f2'; // High-contrast bright white/pink text
+                            node.style.borderColor = '#991b1b'; // Red border
+                        }
+                    }
+                }
+            }
+        });
+
+        const echothreadEl = document.getElementById('echothread');
+        if (echothreadEl) {
+            observer.observe(echothreadEl, { childList: true, subtree: true, attributes: true });
+        }
     </script>
 </body>
 </html>
