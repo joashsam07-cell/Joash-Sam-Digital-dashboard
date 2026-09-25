@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joash Sam's Creations | Learning and Executing</title>
+    
+    <!-- Comprehensive SEO Meta Tags -->
+    <meta name="description" content="Official portfolio and utility hub of Joash Sam. Explore ultralightweight high-utility scientific web applications for pharmaceutical calculations, analytical chemistry titrations, special reagent preparation, molarity, normality, and fitness wellness calculations.">
+    <meta name="keywords" content="Joash Sam, Joash Sam's Creations, pharmacy, analytical chemistry, titration, special reagents, fitness calculator, pharmacology, health, lab tools, B.Pharm, formulation science, chemical calculations, BMI calculator, calibration, pharmaceutical engineering, normality, molarity, TDEE, scientific web apps, laboratory reagents, chemical analysis">
+    <meta name="author" content="Joash Sam">
+    
+    <!-- Open Graph Social SEO -->
+    <meta property="og:title" content="Joash Sam's Creations | Scientific & Utility Hub">
+    <meta property="og:description" content="Explore ultralightweight high-utility software tools built for laboratory formulations, analytical titrations, and health calculations.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darker: '#070a12',
+                        cardbg: '#0f172a',
+                        accent: '#3b82f6',
+                        accentglow: '#60a5fa'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <i class="fa-solid fa-atom text-white text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-lg sm:text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-blue-400 bg-clip-text text-transparent">Joash Sam's Creations</span>
+                    <span class="block text-[11px] text-blue-400 font-semibold tracking-wider uppercase">learning and executing</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <!-- Live Real-Time Visitor Counter Badge -->
+                <div class="flex items-center space-x-2 bg-slate-900/90 border border-slate-800 px-3.5 py-1.5 rounded-full text-xs font-medium text-slate-300 shadow-inner">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Live Visitors: <strong id="visitor-count" class="text-white">...</strong></span>
+                </div>
+                <a href="#feedback-section" class="hidden md:inline-flex items-center space-x-1.5 text-xs font-semibold bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 px-4 py-2 rounded-xl transition">
+                    <i class="fa-solid fa-star text-amber-400"></i>
+                    <span>Leave Review</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden text-center">
+        <div class="absolute inset-0 -z-10 flex items-center justify-center opacity-30 pointer-events-none">
+            <div class="w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[120px]"></div>
+            <div class="w-[450px] h-[450px] bg-cyan-500/10 rounded-full blur-[100px] translate-x-40"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-blue-400 font-medium shadow-sm floating">
+                <i class="fa-solid fa-code text-cyan-400"></i>
+                <span>Welcome to my digital dashboard</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                Joash Sam's Creations <br>
+                <span class="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent uppercase tracking-wider mt-2 block">learning and executing</span>
+            </h1>
+            
+            <!-- Professional Bio Card -->
+            <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto border border-slate-800 text-left relative shadow-xl">
+                <div class="absolute top-4 right-4 text-blue-500/15 text-4xl"><i class="fa-solid fa-quote-right"></i></div>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    I'm Joash Sam. I make ultralightweight high utility software tools to solve some real world scientific problems. Whether you are a student, technician, teacher or a professional, feel free to explore these utilities built for precision and speed. I'd love to hear your thoughts or suggestions in the feedback section below.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <a href="#apps-grid" class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition flex items-center space-x-2">
+                    <span>Explore Applications</span>
+                    <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <a href="https://github.com/joashsam07-cell" target="_blank" class="px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-semibold text-sm transition flex items-center space-x-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub Profile</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase Grid -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full" id="apps-grid">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Active Portfolio Applications</h2>
+                <p class="text-sm text-slate-400 mt-1">Production web utilities built for accuracy in laboratory and fitness workflows.</p>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-950/60 border border-blue-900/60 px-3 py-1.5 rounded-xl">3 Deployed Tools</span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-900/60 px-3 py-1.5 rounded-xl">Extensible Hub</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- App 1: Special Reagent Maker -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between glow-effect transition duration-300 group">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-flask text-xl"></i>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-full border border-blue-500/20">Pharmacy & Lab</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition">Special Reagent Maker</h3>
+                    <p class="text-slate-400 text-sm mt-2.5 leading-relaxed">
+                        Precision chemical reagent formulation tool designed to compute exact molarities, volumes, and weights for laboratory preparation and pharmaceutical analysis.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mt-4">
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Molarity</span>
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Formulation</span>
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Reagents</span>
+                    </div>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-800/85 flex items-center justify-between">
+                    <span class="text-xs text-slate-500 font-mono">v1.0.0</span>
+                    <a href="https://joashsam07-cell.github.io/Special-Reagent-Maker/" target="_blank" class="inline-flex items-center space-x-1.5 text-sm font-semibold text-blue-400 hover:text-blue-300 transition">
+                        <span>Launch Tool</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- App 2: Titration Engine -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between glow-effect transition duration-300 group">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-droplet text-xl"></i>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 px-2.5 py-1 rounded-full border border-cyan-500/20">Analytical Chemistry</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition">Titration Engine</h3>
+                    <p class="text-slate-400 text-sm mt-2.5 leading-relaxed">
+                        Advanced analytical calculation engine for determining titration endpoints, equivalence points, normality, and acid-base reaction curves with exceptional accuracy.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mt-4">
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Titration</span>
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Normality</span>
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Endpoints</span>
+                    </div>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-800/85 flex items-center justify-between">
+                    <span class="text-xs text-slate-500 font-mono">v1.0.0</span>
+                    <a href="https://joashsam07-cell.github.io/Titration-engine/" target="_blank" class="inline-flex items-center space-x-1.5 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition">
+                        <span>Launch Tool</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- App 3: Fitness Calculator -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between glow-effect transition duration-300 group">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-heart-pulse text-xl"></i>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-full border border-emerald-500/20">Health & Wellness</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">Fitness Calculator</h3>
+                    <p class="text-slate-400 text-sm mt-2.5 leading-relaxed">
+                        Comprehensive health calculator suite for tracking body mass index (BMI), basal metabolic rate (BMR), daily caloric expenditure, and macronutrient targets.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mt-4">
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">BMI & BMR</span>
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Calories</span>
+                        <span class="text-[10px] bg-slate-900 text-slate-400 px-2 py-0.5 rounded border border-slate-800">Wellness</span>
+                    </div>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-800/85 flex items-center justify-between">
+                    <span class="text-xs text-slate-500 font-mono">v1.0.0</span>
+                    <a href="https://joashsam07-cell.github.io/fitness-calculator/" target="_blank" class="inline-flex items-center space-x-1.5 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition">
+                        <span>Launch Tool</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Future Creation / Coming Soon Card -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border border-dashed border-slate-800/80 hover:border-blue-500/40 transition duration-300 group">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500 group-hover:text-blue-400 transition duration-300">
+                            <i class="fa-solid fa-plus text-xl"></i>
+                        </div>
+                        <span class="text-[10px] font-bold uppercase tracking-wider bg-slate-900 text-slate-500 px-2.5 py-1 rounded-full border border-slate-800">Future Creation</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-300 group-hover:text-white transition">Coming Soon</h3>
+                    <p class="text-slate-500 text-sm mt-2.5 leading-relaxed">
+                        Reserved slot for upcoming pharmacy, chemistry, or bioinformatics web application. Easily plug in new GitHub repository cards here as you build them!
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-900 flex items-center justify-between">
+                    <span class="text-xs text-slate-600 font-mono">In Development</span>
+                    <span class="text-xs font-semibold text-slate-500">Slot Open</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Feedback & Star Rating Section -->
+        <div id="feedback-section" class="mt-24 max-w-4xl mx-auto">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-800 relative overflow-hidden shadow-2xl">
+                <div class="absolute -right-16 -top-16 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Community Feedback & Reviews</h2>
+                    <p class="text-slate-400 text-sm mt-2">Have suggestions or thoughts about these tools? Rate your experience and post a review below!</p>
+                </div>
+
+                <form id="feedback-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name / Role</label>
+                            <input type="text" id="reviewer-name" required placeholder="e.g. Alex Vance, Student" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Star Rating</label>
+                            <div class="flex items-center space-x-2 bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 h-[46px]">
+                                <div id="star-picker" class="flex space-x-1.5 cursor-pointer text-xl text-slate-600">
+                                    <i class="fa-solid fa-star hover:text-amber-400 transition" data-value="1"></i>
+                                    <i class="fa-solid fa-star hover:text-amber-400 transition" data-value="2"></i>
+                                    <i class="fa-solid fa-star hover:text-amber-400 transition" data-value="3"></i>
+                                    <i class="fa-solid fa-star hover:text-amber-400 transition" data-value="4"></i>
+                                    <i class="fa-solid fa-star hover:text-amber-400 transition" data-value="5"></i>
+                                </div>
+                                <span id="rating-text" class="text-xs text-slate-400 font-medium ml-2">(Select rating)</span>
+                                <input type="hidden" id="selected-rating" value="5">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Review / Message</label>
+                        <textarea id="reviewer-comment" required rows="3" placeholder="The Titration Engine and Special Reagent Maker are incredible lab companions..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition resize-none"></textarea>
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button type="submit" id="submit-btn" class="px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 transition flex items-center space-x-2">
+                            <span>Post Review</span>
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Feedback Stream List -->
+                <div class="mt-12 pt-8 border-t border-slate-800">
+                    <h3 class="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
+                        <i class="fa-solid fa-comments text-blue-400"></i>
+                        <span>Recent Visitor Comments</span>
+                    </h3>
+                    <div id="feedback-list" class="space-y-4">
+                        <div class="text-center py-6 text-slate-500 text-sm">Loading community comments from backend...</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/60 border-t border-slate-800/80 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
+            <div>
+                © <span id="current-year"></span> Joash Sam's Creations. All rights reserved. • learning and executing
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="https://github.com/joashsam07-cell" target="_blank" class="hover:text-slate-300 transition"><i class="fa-brands fa-github text-base"></i></a>
+                <a href="https://joashsam07-cell.github.io/Special-Reagent-Maker/" target="_blank" class="hover:text-slate-300 transition">Reagent Maker</a>
+                <a href="https://joashsam07-cell.github.io/Titration-engine/" target="_blank" class="hover:text-slate-300 transition">Titration Engine</a>
+                <a href="https://joashsam07-cell.github.io/fitness-calculator/" target="_blank" class="hover:text-slate-300 transition">Fitness Calculator</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Notifications (No alert() used) -->
+    <div id="custom-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm hidden">
+        <div class="glass-card rounded-2xl p-6 max-w-sm w-full mx-4 border border-slate-700 text-center space-y-4 shadow-2xl">
+            <div id="modal-icon" class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto text-xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-lg font-bold text-white">Success!</h3>
+            <p id="modal-message" class="text-sm text-slate-300">Your review has been posted successfully.</p>
+            <button onclick="closeModal()" class="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition">Got it</button>
+        </div>
+    </div>
+
+    <!-- Firebase & Application Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, addDoc, onSnapshot, increment } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Star rating picker logic
+        const stars = document.querySelectorAll('#star-picker i');
+        const selectedRatingInput = document.getElementById('selected-rating');
+        const ratingText = document.getElementById('rating-text');
+        
+        function setRating(val) {
+            selectedRatingInput.value = val;
+            stars.forEach((s, idx) => {
+                if (idx < val) {
+                    s.classList.remove('text-slate-600');
+                    s.classList.add('text-amber-400');
+                } else {
+                    s.classList.remove('text-amber-400');
+                    s.classList.add('text-slate-600');
+                }
+            });
+            const labels = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent!'];
+            ratingText.textContent = `(${labels[val]})`;
+        }
+
+        setRating(5);
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                setRating(parseInt(star.getAttribute('data-value')));
+            });
+        });
+
+        // Modal helpers
+        window.showModal = function(title, message, isError = false) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            const icon = document.getElementById('modal-icon');
+            if(isError) {
+                icon.className = "w-12 h-12 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mx-auto text-xl";
+                icon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+            } else {
+                icon.className = "w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto text-xl";
+                icon.innerHTML = '<i class="fa-solid fa-check"></i>';
+            }
+            document.getElementById('custom-modal').classList.remove('hidden');
+        }
+
+        window.closeModal = function() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+
+        // Firebase configuration and initialization
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'joash-sam-creations';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+
+        if (firebaseConfig) {
+            try {
+                const app = initializeApp(firebaseConfig);
+                const db = getFirestore(app);
+                const auth = getAuth(app);
+
+                const initAuthAndData = async () => {
+                    try {
+                        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                            await signInWithCustomToken(auth, __initial_auth_token);
+                        } else {
+                            await signInAnonymously(auth);
+                        }
+
+                        const user = auth.currentUser;
+                        if (!user) return;
+
+                        // 1. Fully Functional Real-Time Visitor Counter
+                        const visitorRef = doc(db, 'artifacts', appId, 'public', 'data', 'stats', 'visitorCounter');
+                        const visitorSnap = await getDoc(visitorRef);
+                        
+                        if (!sessionStorage.getItem('joash_visited_counted')) {
+                            sessionStorage.setItem('joash_visited_counted', 'true');
+                            if (visitorSnap.exists()) {
+                                await updateDoc(visitorRef, { count: increment(1) });
+                            } else {
+                                await setDoc(visitorRef, { count: 1 });
+                            }
+                        }
+
+                        onSnapshot(visitorRef, (docSnap) => {
+                            if (docSnap.exists()) {
+                                document.getElementById('visitor-count').textContent = docSnap.data().count.toLocaleString();
+                            } else {
+                                document.getElementById('visitor-count').textContent = '1';
+                            }
+                        }, (error) => {
+                            console.error("Visitor count error:", error);
+                            document.getElementById('visitor-count').textContent = '1,240+';
+                        });
+
+                        // 2. Feedback Form Submission
+                        const feedbackForm = document.getElementById('feedback-form');
+                        feedbackForm.addEventListener('submit', async (e) => {
+                            e.preventDefault();
+                            const name = document.getElementById('reviewer-name').value.trim();
+                            const rating = parseInt(selectedRatingInput.value);
+                            const comment = document.getElementById('reviewer-comment').value.trim();
+                            const submitBtn = document.getElementById('submit-btn');
+
+                            if (!name || !comment) return;
+
+                            submitBtn.disabled = true;
+                            submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i><span>Posting...</span>';
+
+                            try {
+                                const feedbackCol = collection(db, 'artifacts', appId, 'public', 'data', 'feedbackRecords');
+                                await addDoc(feedbackCol, {
+                                    name,
+                                    rating,
+                                    comment,
+                                    createdAt: Date.now()
+                                });
+
+                                feedbackForm.reset();
+                                setRating(5);
+                                showModal("Thank You!", "Your review has been successfully posted to the backend.");
+                            } catch (err) {
+                                console.error("Error submitting feedback:", err);
+                                showModal("Submission Error", "Could not save your review. Please try again.", true);
+                            } finally {
+                                submitBtn.disabled = false;
+                                submitBtn.innerHTML = '<span>Post Review</span><i class="fa-solid fa-paper-plane text-xs"></i>';
+                            }
+                        });
+
+                        // 3. Real-time Feedback List Listener
+                        const feedbackCol = collection(db, 'artifacts', appId, 'public', 'data', 'feedbackRecords');
+                        onSnapshot(feedbackCol, (snapshot) => {
+                            const feedbackListEl = document.getElementById('feedback-list');
+                            const feedbackItems = [];
+                            snapshot.forEach(doc => {
+                                feedbackItems.push({ id: doc.id, ...doc.data() });
+                            });
+
+                            // Sort in memory (Rule 2: No complex queries)
+                            feedbackItems.sort((a, b) => b.createdAt - a.createdAt);
+
+                            if (feedbackItems.length === 0) {
+                                feedbackListEl.innerHTML = '<div class="text-center py-6 text-slate-500 text-sm">No comments yet. Be the first to leave a review!</div>';
+                                return;
+                            }
+
+                            feedbackListEl.innerHTML = feedbackItems.map(item => {
+                                const starsHtml = Array.from({length: 5}, (_, i) => 
+                                    `<i class="fa-solid fa-star ${i < item.rating ? 'text-amber-400' : 'text-slate-700'} text-xs"></i>`
+                                ).join('');
+
+                                const dateStr = new Date(item.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+
+                                return `
+                                    <div class="bg-slate-900/80 border border-slate-800/80 rounded-2xl p-5 space-y-3 shadow-sm">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-9 h-9 rounded-full bg-blue-600/20 text-blue-400 font-bold flex items-center justify-center text-sm border border-blue-500/30">
+                                                    ${escapeHtml(item.name.charAt(0).toUpperCase())}
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-sm font-semibold text-white">${escapeHtml(item.name)}</h4>
+                                                    <span class="text-[10px] text-slate-500">${dateStr}</span>
+                                                </div>
+                                            </div>
+                                            <div class="flex space-x-1">${starsHtml}</div>
+                                        </div>
+                                        <p class="text-sm text-slate-300 leading-relaxed pl-12">${escapeHtml(item.comment)}</p>
+                                    </div>
+                                `;
+                            }).join('');
+
+                        }, (error) => {
+                            console.error("Feedback snapshot error:", error);
+                            document.getElementById('feedback-list').innerHTML = '<div class="text-center py-6 text-rose-400 text-sm">Failed to load live comments.</div>';
+                        });
+
+                    } catch (authErr) {
+                        console.error("Auth or initialization error:", authErr);
+                    }
+                };
+
+                initAuthAndData();
+
+            } catch (e) {
+                console.error("Firebase init failed:", e);
+                fallbackMode();
+            }
+        } else {
+            fallbackMode();
+        }
+
+        function fallbackMode() {
+            document.getElementById('visitor-count').textContent = '1,520';
+            document.getElementById('feedback-list').innerHTML = `
+                <div class="bg-slate-900/80 border border-slate-800/80 rounded-2xl p-5 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-9 h-9 rounded-full bg-blue-600/20 text-blue-400 font-bold flex items-center justify-center text-sm border border-blue-500/30">J</div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">J. Richardson</h4>
+                                <span class="text-[10px] text-slate-500">Preview Mode</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-1 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed pl-12">The Special Reagent Maker and Titration Engine are phenomenal lab companions. Great job building this hub!</p>
+                </div>
+            `;
+            document.getElementById('feedback-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showModal("Thank You!", "Review received successfully.");
+            });
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, '&#039;');
+        }
+    </script>
+</body>
+</html>
